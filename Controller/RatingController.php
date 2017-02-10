@@ -44,6 +44,7 @@ class RatingController extends Controller
             'numVotes'      => (int)$rating->getNumVotes(),
             'maxValue'      => $this->container->getParameter('dcs_rating.max_value'),
             'userRating'    => (int)$userRating,
+            'voteType'      => $request->get('voteType'),
             'style'         => $request->get('style')
         );
 
@@ -96,6 +97,7 @@ class RatingController extends Controller
             'params'        => $request->get('params', array()),
             'maxValue'      => $this->container->getParameter('dcs_rating.max_value'),
             'userRating'    => (int)$userRating,
+            'voteType'      => $request->get('voteType'),
             'style'         => $request->get('style')
         );
 
